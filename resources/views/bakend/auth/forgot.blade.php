@@ -19,17 +19,21 @@
 
 <body class="hold-transition login-page">
     <div class="login-box">
+        @include('message')
         <div class="login-logo">
-            <a href="../../index2.html"><b>Forgot</b></a>
+            <a href=""><b>Forgot</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Forgot Your Password</p>
 
-                <form action="../../index3.html" method="post">
+                <form action="{{url('forgot_admin')}}" method="post">
+                    @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required
+                        value="{{old('email')}}">
+                        <span style="color: red">{{$errors->first('email')}}</span>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>

@@ -13,77 +13,15 @@
         <section class="grid-wrap">
             <ul class="row grid">
                 <!-- Portfolio Item Starts -->
+                @foreach ($getrecord as $value)
+
                 <li>
                     <figure>
-                        <img src="img/projects/project-1.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
+                        <img src="{{url('public/portfolio/'.$value->image)}}" alt="Portolio Image" />
+                        <div><span>{{$value->title}}</span></div>
                     </figure>
                 </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-2.jpg" alt="Portolio Image" />
-                        <div><span>Youtube Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-3.jpg" alt="Portolio Image" />
-                        <div><span>Slider Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-4.jpg" alt="Portolio Image" />
-                        <div><span>Local Video Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-5.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-6.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-7.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-8.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="img/projects/project-9.jpg" alt="Portolio Image" />
-                        <div><span>Image Project</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
+                @endforeach
             </ul>
         </section>
         <!-- Portfolio Grid Ends -->

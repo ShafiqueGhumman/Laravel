@@ -9,6 +9,7 @@
 <!-- Main Content Starts -->
 <section class="main-content revealator-slideup revealator-once revealator-delay1">
     <div class="container">
+        @include('message')
         <div class="row">
             <!-- Left Side Starts -->
             <div class="col-12 col-lg-4">
@@ -36,7 +37,8 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="https://slimhamdi.net/tunis/dark/php/process-form.php">
+                <form method="post" action="{{url('contact/post')}}">
+                    @csrf
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">

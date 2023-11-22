@@ -20,9 +20,53 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <section class="content">
+        <div class="container-fluid">
+            @include('message')
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Subject</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($getrecord as $value)
 
+                                    <tr>
+                                        <td>{{$value->id}}</td>
+                                        <td>{{$value->name}}</td>
+                                        <td>{{$value->email}}</td>
+                                        <td>{{$value->subject}}</td>
+                                        <td>{{$value->message}}</td>
+                                        <td>
+                                            <a onclick="return confirm('Are you sure you want to delete')"
+                                            href="{{url('admin/contact/delete/'.$value->id)}}"
+                                            class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
   </div>
   <!-- /.content-wrapper -->
+
 @endsection
+
+
 
 
