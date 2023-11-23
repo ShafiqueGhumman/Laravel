@@ -8,6 +8,9 @@ use App\Models\PortfolioModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
+use App\Models\BlogModel;
+use App\Models\SocialIconModel;
+
 class HomeController extends Controller
 {
     public function index(){
@@ -29,6 +32,7 @@ class HomeController extends Controller
         return view("portfolio",$data);
     }
     public function contact(){
+        $data['getrecord'] = SocialIconModel::find(1);
         $data['meta_title'] = 'Contact';
         $data['className']='contact';
         return view("contact",$data);
@@ -45,13 +49,16 @@ class HomeController extends Controller
         return redirect()->back()->with('success','Message Submitted Successfully');
     }
     public function blog(){
+        $data['getrecord'] = BlogModel::latest()->get();
         $data['meta_title'] = 'Blog';
         $data['className']='blog';
         return view("blog",$data);
     }
-    public function blog_post(){
+    public function blog_post($id,Request $request){
+        $data['getrecord'] = BlogModel::find($id);
         $data['meta_title'] = 'Blog-Post';
         $data['className']='blog-post';
+        // dd($data['getrecord']);
         return view("blog_post",$data);
     }
 }

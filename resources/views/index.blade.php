@@ -20,7 +20,7 @@
                 <h1 class="text-uppercase poppins-font">{{ @$getrecord[0]->your_name }}
                     <span>{{ @$getrecord[0]->work_experience }}</span></h1>
                 <p class="open-sans-font">{{ @$getrecord[0]->description }}</p>
-                <a class="button" href="about.html">
+                <a class="button" href="{{url('about')}}">
                     <span class="button-text">more about me</span>
                     <span class="button-icon fa fa-arrow-right"></span>
                 </a>

@@ -14,23 +14,21 @@
             <!-- Left Side Starts -->
             <div class="col-12 col-lg-4">
                 <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Don't be shy !</h3>
-                <p class="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                <p class="open-sans-font mb-3">{{$getrecord->name}}</p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail me</span>steve@mail.com
+                    <span class="d-block">mail me</span>{{$getrecord->email}}
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">call me</span>+216 21 184 010
+                    <span class="d-block">call me</span>{{$getrecord->mobile}}
                 </p>
                 <ul class="social list-unstyled pt-1 mb-5">
-                    <li class="facebook"><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a>
+                    <li class="facebook"><a title="Facebook" href="{{$getrecord->facebook}}"><i class="fa fa-facebook"></i></a>
                     </li>
-                    <li class="twitter"><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    <li class="twitter"><a title="Twitter" href="{{$getrecord->twitter}}"><i class="fa fa-twitter"></i></a>
                     </li>
-                    <li class="youtube"><a title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
-                    </li>
-                    <li class="dribbble"><a title="Dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+                    <li class="youtube"><a title="Youtube" href="{{$getrecord->youtube}}"><i class="fa fa-youtube"></i></a>
                     </li>
                 </ul>
             </div>

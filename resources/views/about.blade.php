@@ -38,7 +38,7 @@
                         </ul>
                     </div>
                     <div class="col-12 mt-3">
-                        <a class="button" href="#">
+                        <a class="button" href="{{url('public/demo.pdf')}}">
                             <span class="button-text">Download CV</span>
                             <span class="button-icon fa fa-download"></span>
                         </a>

@@ -57,9 +57,9 @@
                 <h2>About</h2>
             </a>
         </li>
-        <li class="icon-box @if(Request::segment(1)=='portfolio') active @endif">
+        <li class="icon-box @if(Request::segment(1)=='port') active @endif">
             <i class="fa fa-briefcase"></i>
-            <a href="{{url('portfolio')}}">
+            <a href="{{url('port')}}">
                 <h2>Portfolio</h2>
             </a>
         </li>
@@ -69,9 +69,9 @@
                 <h2>Contact</h2>
             </a>
         </li>
-        <li class="icon-box @if(Request::segment(1)=='blog') active @endif">
+        <li class="icon-box @if(Request::segment(1)=='blogs') active @endif">
             <i class="fa fa-comments"></i>
-            <a href="{{url('blog')}}">
+            <a href="{{url('blogs')}}">
                 <h2>Blog</h2>
             </a>
         </li>

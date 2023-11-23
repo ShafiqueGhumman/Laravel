@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutModel;
+use App\Models\BlogModel;
 use App\Models\ContactModel;
 use Illuminate\Http\Request;
 use App\Models\HomeModel;
@@ -115,6 +116,7 @@ class dashboardController extends Controller
         return redirect('admin/contact')->with('error','Contact Record Deleted Successfully');
     }
     public function admin_blog(){
-        return view('bakend.blog.list');
+        $data['getrecord'] = BlogModel::latest()->get();
+        return view('bakend.blog.list',$data);
     }
 }

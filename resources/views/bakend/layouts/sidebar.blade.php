@@ -45,7 +45,7 @@
                 <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
         </div>
 
@@ -101,6 +101,23 @@
                         <i class="nav-icon fas fa-blog"></i>
                         <p>
                             Blog
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('admin/social_icon') }}" class="nav-link @if (Request::segment(2) == 'social_icon') active @endif">
+                        <i class="nav-icon fas fa-share-alt"></i>
+                        <p>
+                            Social Icon
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('admin/my_account') }}" class="nav-link
+                     @if (Request::segment(2) == 'my_account') active @endif">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            My Account
                         </p>
                     </a>
                 </li>
