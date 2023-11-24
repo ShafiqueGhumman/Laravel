@@ -18,6 +18,7 @@
                 <img src="{{url('public/blog/'.$getrecord->image)}}" class="img-fluid" alt="Blog image"/>
                 <div class="blog-excerpt open-sans-font pb-5">
                 <p>{{$getrecord->description}}</p>
+                <p>{!! $getrecord->description_text_editor !!}</p>
                 </div>
                 <!-- Article Content Ends -->
             </article>
